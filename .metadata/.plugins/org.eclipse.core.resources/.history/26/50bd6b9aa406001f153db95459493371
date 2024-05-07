@@ -1,0 +1,67 @@
+package com.kh.test.main;
+
+import java.util.Scanner;
+
+public class Test3 {
+	public static void main(String[] args) {
+		// while문 1부터 100까지의 모든 정수들의 합과 평균 구하기
+		int num = 1;
+		int sum = 0;
+		int count = 0;
+		//double ave;
+		
+		while (num<=100) {
+			sum += num;
+			count++;
+			System.out.println(sum);
+		}
+		System.out.println(sum);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		// while문을 사용해서 switch 문 계속 숫자 작성하게 만들어주고
+		// case3 : 종료 만들어주기
+	
+		
+		// switch case 문 실행해보기
+		Scanner sc =new Scanner(System.in);
+		String 할일;
+		
+		// while에 true 대신 true가 담겨져 있는 변수를 하나 만들어주고
+		// 변수값을 true -> false 로 변경하도록 
+		boolean 계속 = true;
+		while(true) {
+		//while(true) {
+			System.out.print("숫자 입력 : ");
+			int 날짜 = sc.nextInt();
+			sc.nextLine();
+			
+			switch(날짜) {
+				case 1:
+					할일 = "월요일 : 업무";
+					break;
+				case 2: case 5:
+					할일 = "화요일 : 공부";
+					break;
+				case 3:
+					System.out.println("종료");
+					계속 = false;
+					//return;
+				default :
+					할일 = "날짜와 관계없이 휴식";
+			}
+			System.out.println("일정 : " + 할일);
+		}
+		
+	}
+}
